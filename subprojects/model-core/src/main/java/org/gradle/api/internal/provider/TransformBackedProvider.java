@@ -90,4 +90,9 @@ public class TransformBackedProvider<OUT, IN> extends AbstractMinimalProvider<OU
         provider.visitProducerTasks(producers::add);
         return producers;
     }
+
+    @Override
+    public String toString() {
+        return "map(" + provider + ")";
+    }
 }
